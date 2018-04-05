@@ -24,7 +24,7 @@ export default class Body extends React.Component {
                 <tbody>
                     {
                         this.props.item.map(value => {
-                            console.log("value: ")
+                            console.log("value: ");
                             console.log(value)
                             return (
                                 <tr key={value.id}>
