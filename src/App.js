@@ -31,16 +31,16 @@ export default class App extends React.Component {
       ownerName: ""
     }
 
-    this.initData();
-  }
-
-  initData() {
     let item1 = new Product(1, "milk", "Provide drinks");
     let item2 = new Product(2, "foods", "Provide something to eat");
 
     // bind values to state
     this.state.buyItems.push(item1, item2);
+
+    // The only place where you can assign this.state is the constructor.
+    // To assign state outside the constructor, must use setState().
     this.state.ownerName = "Tuan";
+
   }
 
   render() {

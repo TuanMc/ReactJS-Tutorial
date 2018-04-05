@@ -1,16 +1,14 @@
 import React from 'react';
 import '../assets/App.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 export default class Body extends React.Component {
+
+    btnOKClick() {
+        console.log("btn OK clicked");
+    }
+
     render() {
-        function btnOKClick() {
-            console.log("btn OK clicked");
-        }
-
-        function btnSearchClick() {
-
-        }
-
         return (
             <table className="table table-dark table-hover" >
                 <thead>
@@ -34,7 +32,14 @@ export default class Body extends React.Component {
                                     <td>
                                         <div className="input-group">
                                             <input type="text" className="form-control" placeholder="Client name" />
-                                            <div className="input-group-addon"><i className="fa fa-search fa-lg" onClick={btnSearchClick}></i></div>
+                                            <div className="input-group-addon">
+
+                                                {/* To use font-awsome:
+                                                    - s1: npm install --save font-awesome
+                                                    - s2: import 'font-awesome/css/font-awesome.min.css';
+                                                */}
+                                                <i className="fa fa-search fa-lg" onClick={this.btnOKClick}></i>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
