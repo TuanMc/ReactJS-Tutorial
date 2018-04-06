@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import '../assets/App.css';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -16,6 +17,7 @@ export default class Body extends React.Component {
                         <th>Id</th>
                         <th>Name</th>
                         <th>Notes</th>
+                        <th></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -41,6 +43,16 @@ export default class Body extends React.Component {
                                                 <i className="fa fa-search fa-lg" onClick={this.btnOKClick}></i>
                                             </div>
                                         </div>
+                                    </td>
+                                    <td>
+                                        {/* 
+                                        To use Bootstrap 4: 
+                                        - s1: npm install --save reactstrap@next react react-dom
+                                        - s2: import needed components. ex: import { Alert } from 'reactstrap';
+
+                                        * For more information, visit page: https://reactstrap.github.io/
+                                        */}
+                                        <Button color="danger">Danger!</Button>
                                     </td>
                                 </tr>
                             )
