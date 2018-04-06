@@ -5,7 +5,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 export default class Body extends React.Component {
 
-    btnOKClick() {
+    handleBtnOKClick() {
         console.log("btn OK clicked");
     }
 
@@ -52,7 +52,7 @@ export default class Body extends React.Component {
 
                                         * For more information, visit page: https://reactstrap.github.io/
                                         */}
-                                        <Button color="danger">Danger!</Button>
+                                        <Button className="btn" color="danger">Danger!</Button>
                                     </td>
                                 </tr>
                             )
