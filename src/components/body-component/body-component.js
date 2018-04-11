@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import '../assets/App.css';
+import '../../assets/App.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Body extends React.Component {
