@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Login from './components/login-component/login-component';
+import Login from './components/Login/Login';
 import Main from './components/main';
 
 const Router = () => (
