@@ -29,8 +29,8 @@ export default class Login extends Component {
               <a className="btn btn-primary btn-block" href="/home">Login</a>
             </form>
             <div className="text-center">
-              <a className="d-block small mt-3" href="">Register an Account</a>
-              <a className="d-block small" href="">Forgot Password?</a>
+              <a className="d-block small mt-3" href="/register">Register an Account</a>
+              <a className="d-block small" href="/forget_password">Forgot Password?</a>
             </div>
           </div>
         </div>
