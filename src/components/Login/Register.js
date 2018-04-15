@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import '../../assets/css/sb-admin.min.css';
 import '../../assets/vendor/bootstrap/css/bootstrap.min.css';
 import '../../assets/vendor/font-awesome/css/font-awesome.min.css';
+import $ from 'jquery';
 
 export default class Register extends Component {
+
+  // Add Jquery in ReactJS
+  handleRegisterClick() {
+    let data = $('#exampleInputName').val();
+    console.log("data: " + data);
+  }
+
   render() {
     document.body.style.backgroundColor = "#343a40";
     return (
@@ -41,7 +49,7 @@ export default class Register extends Component {
                     </div>
                   </div>
                 </div>
-                <a className="btn btn-primary btn-block" href="/login">Register</a>
+                <a className="btn btn-primary btn-block" onClick={this.handleRegisterClick.bind(this)}>Register</a>
               </form>
               <div className="text-center">
                 <a className="d-block small mt-3" href="/login">Login Page</a>
