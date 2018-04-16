@@ -2,11 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-// Assets
-import './assets/index.css';
-
 // Components
-import Router from './app-routing';
+import AppRouter from './app-routing';
 
 ReactDOM.render(
     //  To use react-router:
@@ -15,7 +12,7 @@ ReactDOM.render(
     //  For more information, visit https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf   
     (
         <BrowserRouter>
-            <Router />
+            <AppRouter />
         </BrowserRouter>
     ),
     document.getElementById('root')

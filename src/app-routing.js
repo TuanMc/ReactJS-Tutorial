@@ -2,12 +2,13 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 // Components
-import Login from './components/Login/Login';
-import Main from './components/main';
-import Register from './components/Login/Register';
-import ForgetPassword from './components/Login/ForgetPassword';
+import Main from './components/body/main';
 
-const Router = () => (
+import Login from './components/login/Login';
+import Register from './components/login/Register';
+import ForgetPassword from './components/login/ForgetPassword';
+
+const AppRouter = () => (
     <Switch>
 
         {/* The page will redirect to login page if url */}
@@ -21,4 +22,4 @@ const Router = () => (
     </Switch>
 )
 
-export default Router
+export default AppRouter
