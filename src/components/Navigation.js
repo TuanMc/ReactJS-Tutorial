@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import '../../assets/css/sb-admin.min.css';
-import '../../assets/vendor/bootstrap/css/bootstrap.min.css';
-import '../../assets/vendor/font-awesome/css/font-awesome.min.css';
+import '../assets/css/sb-admin.min.css';
+import '../assets/vendor/bootstrap/css/bootstrap.min.css';
+import '../assets/vendor/font-awesome/css/font-awesome.min.css';
 
 export default class Navigation extends Component {
   render() {

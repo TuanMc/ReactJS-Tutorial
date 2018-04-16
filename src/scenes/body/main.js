@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Components
-import Navigation from '../common/Navigation';
+import Navigation from '../../components/Navigation';
 
 export default class Main extends Component {
   render() {

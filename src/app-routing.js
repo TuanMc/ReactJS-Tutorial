@@ -1,12 +1,12 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-// Components
-import Main from './components/body/main';
+// Scenes
+import Main from './scenes/body/main';
 
-import Login from './components/login/Login';
-import Register from './components/login/Register';
-import ForgetPassword from './components/login/ForgetPassword';
+import Login from './scenes/login/Login';
+import Register from './scenes/login/Register';
+import ForgetPassword from './scenes/login/ForgetPassword';
 
 const AppRouter = () => (
     <Switch>
