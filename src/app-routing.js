@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 // Scenes
-import Main from './scenes/body/main';
+import Main from './scenes/landing/main';
 
 import Login from './scenes/login/Login';
 import Register from './scenes/login/Register';
@@ -16,9 +16,9 @@ const AppRouter = () => (
 
         {/* Login Components */}
         <Route path='/login' component={Login} />
-        <Route path='/home' component={Main} />
         <Route path='/register' component={Register} />
         <Route path='/forget_password' component={ForgetPassword} />
+        <Route path='/home' component={Main} />
     </Switch>
 )
 
