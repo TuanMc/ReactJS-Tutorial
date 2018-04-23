@@ -10,36 +10,18 @@ import { LoginService } from '../../services/login.service';
 const loginService = new LoginService();
 
 export default class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: ""
-    };
-
-    // First way to bind this to function
-    this.handleLoginClick = this.handleLoginClick.bind(this);
-  }
-
   componentWillUnmount() {
     document.body.style.backgroundColor = "white";
   }
 
-  // UPDATE INPUT FIELDS
-  updateUsername(event) {
-    this.setState({ username: event.target.value });
-  }
-
-  updatePassword(event) {
-    this.setState({ password: event.target.value });
-  }
-
   // EVENTS
-  handleLoginClick() {
-    if (this.state.username.trim() !== "" && this.state.password.trim() !== "") {
+  // Using arrow function to automatically by this to function or 
+  // we can declare in constructor function.
+  handleLoginClick = () => {
+    if (this.userName.value.trim() !== "" && this.passWord.value.trim() !== "") {
       var user = {
-        username: this.state.username,
-        password: this.state.password
+        username: this.userName.value,
+        password: this.passWord.value
       }
 
       let isUser = loginService.login(user);
@@ -47,7 +29,7 @@ export default class Login extends Component {
         this.props.history.push("/home");
       }
       else
-        console.log("Wrong username or password")
+        alert("Wrong username or password")
     }
   }
 
@@ -62,12 +44,13 @@ export default class Login extends Component {
               <div className="form-group">
                 <label>Username</label>
 
-                {/* Second way to bind this to a function*/}
-                <input className="form-control" onChange={this.updateUsername.bind(this)} type="email" placeholder="Username" />
+                {/* Second way to bind this to a function */}
+                {/* Using ref to bind data to a variable */}
+                <input className="form-control" placeholder="Username" ref={val => (this.userName = val)} />
               </div>
               <div className="form-group">
                 <label>Password</label>
-                <input className="form-control" onChange={this.updatePassword.bind(this)} type="password" placeholder="Password" />
+                <input className="form-control" placeholder="Password" type="password" ref={val => (this.passWord = val)} />
               </div>
               <div className="form-group">
                 <div className="form-check">
